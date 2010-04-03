@@ -55,7 +55,7 @@ namespace Castle.Core.Logging
 			ChangeName(loggerName);
 		}
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
         /// <summary>
 		/// Keep the instance alive in a remoting scenario
 		/// </summary>

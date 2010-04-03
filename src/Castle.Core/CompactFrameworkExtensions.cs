@@ -12,33 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-namespace Castle.Core.Resource
+#if NETCF
+
+namespace System
 {
-	#if !SILVERLIGHT && !NETCF
-
-	using System;
-
-	public class ConfigResourceFactory : IResourceFactory
+	/// <summary>
+	/// This is intended to make the generated AssemblyInfo.cs file compile
+	/// </summary>
+	[AttributeUsage(AttributeTargets.Assembly)]
+	public class AssemblyFileVersionAttribute : Attribute
 	{
-		public ConfigResourceFactory()
+		public AssemblyFileVersionAttribute(string version)
 		{
-		}
-
-		public bool Accept(CustomUri uri)
-		{
-			return "config".Equals(uri.Scheme);
-		}
-
-		public IResource Create(CustomUri uri)
-		{
-			return new ConfigResource(uri);
-		}
-
-		public IResource Create(CustomUri uri, String basePath)
-		{
-			return Create(uri);
 		}
 	}
-	
-	#endif
 }
+
+#endif

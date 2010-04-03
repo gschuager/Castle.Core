@@ -30,8 +30,11 @@ namespace Castle.Core.Internal
 				lockAcquired = true;
 				return;
 			}
-
+#if NETCF
+			lockAcquired = Monitor.TryEnter(locker);
+#else            
 			lockAcquired = Monitor.TryEnter(locker, 0);
+#endif
 		}
 
 		public void Dispose()

@@ -93,7 +93,7 @@ namespace Castle.Core.Logging.Factories
 
 		#endregion
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 		/// <summary>
 		/// Gets the configuration file.
 		/// </summary>

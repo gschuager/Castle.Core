@@ -17,7 +17,7 @@ namespace Castle.Core.Logging
 	using System;
 	using System.Runtime.Serialization;
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 	[Serializable]
 #endif
 	public class LoggerException : Exception
@@ -34,7 +34,7 @@ namespace Castle.Core.Logging
 		{
 		}
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 		protected LoggerException(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 		}

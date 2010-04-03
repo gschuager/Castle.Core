@@ -42,7 +42,7 @@ namespace Castle.Core.Logging
 
 		public abstract ILogger Create(String name, LoggerLevel level);
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 		/// <summary>
 		/// Gets the configuration file.
 		/// </summary>

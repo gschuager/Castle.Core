@@ -21,7 +21,7 @@ namespace Castle.Core.Resource
 	using System.Resources;
 	using System.Text;
 
-#if SILVERLIGHT
+#if SILVERLIGHT ||NETCF
 	using Castle.Core.Extensions;
 #endif
 
@@ -38,7 +38,7 @@ namespace Castle.Core.Resource
 		{
 			Assembly assembly = ObtainAssembly(resource.Host);
 
-#if SILVERLIGHT
+#if SILVERLIGHT || NETCF
             string[] paths = resource.Path.Split(new char[] { '/' }).FindAll(s => !string.IsNullOrEmpty(s));
 #else
             string[] paths = resource.Path.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);

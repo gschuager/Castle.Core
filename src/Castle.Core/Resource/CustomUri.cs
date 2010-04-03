@@ -130,10 +130,10 @@ namespace Castle.Core.Resource
 				}
 			}
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 			path = Environment.ExpandEnvironmentVariables(sb.ToString());
 #endif
-#if SILVERLIGHT
+#if SILVERLIGHT || NETCF
 			path = sb.ToString();
 #endif
 		}

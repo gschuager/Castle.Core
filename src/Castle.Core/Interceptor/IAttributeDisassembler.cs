@@ -14,6 +14,7 @@
 
 namespace Castle.DynamicProxy
 {
+#if !NETCF
 	using System;
 	using System.Reflection.Emit;
 
@@ -36,4 +37,5 @@ namespace Castle.DynamicProxy
 		/// </remarks>
 		CustomAttributeBuilder Disassemble(Attribute attribute);
 	}
+#endif
 }

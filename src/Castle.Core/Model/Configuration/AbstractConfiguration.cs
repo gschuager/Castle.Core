@@ -97,7 +97,11 @@ namespace Castle.Core.Configuration
 
 			try
 			{
+#if NETCF
+				return Convert.ChangeType(Value, type, System.Globalization.CultureInfo.InvariantCulture);
+#else
 				return Convert.ChangeType(Value, type, System.Threading.Thread.CurrentThread.CurrentCulture);
+#endif
 			}
 			catch(InvalidCastException)
 			{

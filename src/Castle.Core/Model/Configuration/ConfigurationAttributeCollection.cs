@@ -14,7 +14,7 @@
 
 namespace Castle.Core.Configuration
 {
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 
 	using System;
 	using System.Collections.Specialized;
@@ -41,7 +41,7 @@ namespace Castle.Core.Configuration
 		{
 		}
 
-#if !SILVERLIGHT
+#if !SILVERLIGHT && !NETCF
 		protected ConfigurationAttributeCollection(SerializationInfo info, StreamingContext context) : base(info, context)
 		{
 		}

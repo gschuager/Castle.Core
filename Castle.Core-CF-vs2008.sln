@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Castle.Core-CF-vs2008", "src\Castle.Core\Castle.Core-CF-vs2008.csproj", "{96BC3892-9147-4779-889C-9DD965BACFF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		FFDebug|Any CPU = FFDebug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test Debug|Any CPU = Test Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.FFDebug|Any CPU.ActiveCfg = FFDebug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.FFDebug|Any CPU.Build.0 = FFDebug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.FFDebug|Any CPU.Deploy.0 = FFDebug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Test Debug|Any CPU.ActiveCfg = Test Debug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Test Debug|Any CPU.Build.0 = Test Debug|Any CPU
+		{96BC3892-9147-4779-889C-9DD965BACFF1}.Test Debug|Any CPU.Deploy.0 = Test Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

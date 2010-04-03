@@ -14,7 +14,7 @@
 
 namespace Castle.Core.Logging
 {
-	#if !SILVERLIGHT
+	#if !SILVERLIGHT && !NETCF
 
 	/// <summary>
 	/// Used to create the TraceLogger implementation of ILogger interface. See <see cref="TraceLogger"/>. 
