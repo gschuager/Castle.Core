@@ -1,0 +1,16 @@
+Castle.Core
+
+Things left out:
+- DynamicProxy
+- log4netIntegration & NLogIntegration (log4net is available for CF - NLog don't know)
+- DiagnosticsLogger, TraceLogger, WebLogger (and factories)
+- serialization & remoting stuff
+- ConfigResource & ConfigResourceFactory (there is no ConfigurationManager in CF)
+- IEmailSender & DefaultSmtpSender
+
+Modifications:
+- replaced AppDomain.CurrentDomain.BaseDirectory by Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)
+- replaced System.Threading.Thread.CurrentThread.CurrentCulture by System.Globalization.CultureInfo.InvariantCulture
+- made ConfigurationAttributeCollection based on Dictionary<string, string> instead of NameValueCollection (like SL build)
+
+I don't know how to integrate the Tests project.
