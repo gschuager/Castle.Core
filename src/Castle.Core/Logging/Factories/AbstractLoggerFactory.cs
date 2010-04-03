@@ -42,7 +42,7 @@ namespace Castle.Core.Logging
 
 		public abstract ILogger Create(String name, LoggerLevel level);
 
-#if !SILVERLIGHT && !NETCF
+#if !SILVERLIGHT
 		/// <summary>
 		/// Gets the configuration file.
 		/// </summary>
@@ -58,7 +58,11 @@ namespace Castle.Core.Logging
 			}
 			else
 			{
-				result = new FileInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName));
+#if NETCF
+				result = new FileInfo(Path.Combine(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase), fileName));
+#else
+ 				result = new FileInfo(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName));
+#endif
 			}
 
 			return result;

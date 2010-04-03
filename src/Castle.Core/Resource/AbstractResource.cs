@@ -20,8 +20,10 @@ namespace Castle.Core.Resource
 
 	public abstract class AbstractResource : IResource
 	{
-#if SILVERLIGHT || NETCF
+#if SILVERLIGHT
         protected static readonly String DefaultBasePath = String.Empty;
+#elif NETCF
+		protected static readonly String DefaultBasePath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase);
 #else
 		protected static readonly String DefaultBasePath = AppDomain.CurrentDomain.BaseDirectory;
 #endif
